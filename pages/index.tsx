@@ -1,6 +1,7 @@
 
 import Head from 'next/head';
 import Image from 'next/image';
+import Hero from '@/components/hero/Hero';
 import styles from '@/styles/Home.module.css';
 
 export default function Home() {
@@ -13,14 +14,13 @@ export default function Home() {
           name="description"
           content="Discover exercises that target every muscle group, helping you build strength and endurance."
         />
-        
         <meta name="viewport" content="width=device-width, initial-scale=1" />
       </Head>
-      MAin hero image
+      <Hero />
       <div className={styles.container}>
         <div className={styles.heroImageWrapper}>
           <Image
-            src="https://agi-prod-file-upload-public-main-use1.s3.amazonaws.com/f5bfade2-45a6-41aa-bd9c-d0b9c1077a28"
+            src="/workout.svg"
             alt="Hero image for Full-Body Workouts"
             className={styles.heroImage}
             width={1200}
@@ -31,15 +31,15 @@ export default function Home() {
 
         <div className={styles.mainGrid}>
           <div className={styles.mainContent}>
-            Contains blog detqails, Main center
-
+            Contains blog detqails, Main center 
+             
           </div>
 
           {/* Right sidebar */}
-          Sidebar On the right side
+           Sidebar On the right side
         </div>
       </div>
-
+      
       Articelss section
     </>
   );

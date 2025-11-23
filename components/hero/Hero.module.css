@@ -1,0 +1,38 @@
+.header {
+  text-align: center;
+  padding-top: 28px;
+  font-size: var(--fs-h2);
+  background: var(--color-bg-main);
+}
+
+.container {
+  max-width: 1220px;
+  margin: 0 auto;
+  padding: 0 22px;
+}
+
+.breadcrumb {
+  color: var(--color-meta);
+  font-size: var(--fs-sm);
+  margin-bottom: 18px;
+  letter-spacing: 0.01em;
+}
+
+.blogTitle {
+  font-size: var(--fs-hero);
+  font-weight: 700;
+  margin: 18px 0 32px 0;
+}
+
+/* Mobile */
+@media (max-width: 700px) {
+  .blogTitle {
+    font-size: 2.1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .blogTitle {
+    font-size: 1.35rem;
+  }
+}
