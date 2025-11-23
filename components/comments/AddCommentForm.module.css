@@ -1,4 +1,4 @@
-    .addCommentForm {
+.addCommentForm {
   margin-top: 30px;
   background: var(--color-bg-card);
   border-radius: var(--radius-sm);
@@ -10,6 +10,25 @@
   font-size: 1.14rem;
   font-weight: 600;
   margin-bottom: var(--gap-sm);
+}
+
+.message {
+  padding: 12px 16px;
+  border-radius: var(--radius-xs);
+  margin-bottom: var(--gap-md);
+  font-size: var(--fs-sm);
+}
+
+.message.success {
+  background: #d1fae5;
+  color: #065f46;
+  border: 1px solid #6ee7b7;
+}
+
+.message.error {
+  background: #fee2e2;
+  color: #991b1b;
+  border: 1px solid #fca5a5;
 }
 
 .inputRow {
@@ -35,38 +54,54 @@
   border-color: var(--color-accent);
 }
 
+.input:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
 textarea.input {
   font-family: inherit;
   resize: vertical;
-  min-height: 60px;
+  min-height: 80px;
 }
 
 .rateArticleRow {
   display: flex;
-  align-items: center;
-  gap: 13px;
+  flex-direction: column;
+  gap: var(--gap-sm);
   margin-bottom: 18px;
+}
+
+.ratingButtons {
+  display: flex;
+  gap: 8px;
   flex-wrap: wrap;
 }
 
-.ratingEmojiRow {
-  display: flex;
-  gap: 6px;
-}
-
 .rateBtn {
-  font-size: 1rem;
+  font-size: 0.9rem;
   border: none;
-  padding: 4px 14px;
+  padding: 6px 12px;
   border-radius: 16px;
-  margin-left: 16px;
   cursor: pointer;
   font-weight: 600;
-  transition: opacity 0.2s;
+  transition: all 0.2s;
+  opacity: 0.7;
 }
 
-.rateBtn:hover {
-  opacity: 0.9;
+.rateBtn:hover:not(:disabled) {
+  opacity: 1;
+  transform: translateY(-1px);
+}
+
+.rateBtn.selected {
+  opacity: 1;
+  box-shadow: 0 0 0 2px var(--color-accent);
+}
+
+.rateBtn:disabled {
+  cursor: not-allowed;
+  opacity: 0.5;
 }
 
 .rateBtn:focus-visible {
@@ -79,7 +114,7 @@ textarea.input {
   color: #fff;
 }
 
-.rateBed {
+.rateBad {
   background: var(--color-bad);
   color: #fff;
 }
@@ -91,7 +126,7 @@ textarea.input {
 
 .rateNormal {
   background: var(--color-normal);
-  color: #fff;
+  color: #222;
 }
 
 .rateNice {
@@ -108,11 +143,16 @@ textarea.input {
   font-size: var(--fs-body);
   padding: 11px 34px;
   cursor: pointer;
-  transition: background 0.2s;
+  transition: all 0.2s;
 }
 
-.sendBtn:hover {
+.sendBtn:hover:not(:disabled) {
   background: #2e76fa;
+}
+
+.sendBtn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
 }
 
 .sendBtn:focus-visible {
@@ -126,14 +166,12 @@ textarea.input {
     flex-direction: column;
     gap: 14px;
   }
-  
-  .rateArticleRow {
+
+  .ratingButtons {
     flex-direction: column;
-    align-items: flex-start;
-    gap: 10px;
   }
-  
+
   .rateBtn {
-    margin-left: 0;
+    width: 100%;
   }
 }
