@@ -1,7 +1,21 @@
 import Image from 'next/image';
 import styles from './BlogContent.module.css';
 
-export default function BlogContent() {
+interface BlogContentProps {
+  body: string;
+  date: string;
+  commentCount: number;
+  averageRating: number;
+}
+
+export default function BlogContent({ body, date, commentCount, averageRating }: BlogContentProps) {
+
+  const paragraphs = body.split('\n\n').filter(p => p.trim());
+
+  const renderStars = (rating: number) => {
+    return '★'.repeat(Math.floor(rating)) + '☆'.repeat(5 - Math.floor(rating));
+  };
+
   return (
     <div>
       <div className={styles.authorMetaRow}>
@@ -15,27 +29,46 @@ export default function BlogContent() {
           />
           <div className={styles.authorName}>ALEX CARTER</div>
         </div>
-        <div className={styles.pubDate}>23 JANUARY 2025</div>
-        {/* <span className={styles.exploreMoreLink}>Explore more</span> */}
+        <div className={styles.pubDate}>{date}</div>
+
       </div>
 
-      <div className={styles.blogBody}>
-        Discover exercises that target every muscle group, helping you build strength and endurance. Perfect for beginners and seasoned gym-goers alike.
-        <br /><br />
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus...
-      </div>
+      {paragraphs.map((paragraph, index) => {
+        if (paragraph.startsWith('## ')) {
+          return (
+            <h2 key={index} className={styles.heading2}>
+              {paragraph.replace('## ', '')}
+            </h2>
+          );
+        }
+        if (paragraph.startsWith('### ')) {
+          return (
+            <h3 key={index} className={styles.heading3}>
+              {paragraph.replace('### ', '')}
+            </h3>
+          );
+        }
+
+        if (paragraph.includes('\n- ')) {
+          const items = paragraph.split('\n').filter(line => line.startsWith('- '));
+          return (
+            <ul key={index} className={styles.bulletList}>
+              {items.map((item, i) => (
+                <li key={i}>{item.replace('- ', '')}</li>
+              ))}
+            </ul>
+          );
+        }
+
+        return (
+          <p key={index} className={styles.blogBody}>
+            {paragraph}
+          </p>
+        );
+      })}
 
       <div className={styles.highlightBox}>
-        <b>With over a decade of experience in the fitness industry, Alex specializes in strength training and functional fitness.</b><br />
-        Certified by NASM and known for his motivational style, Alex designs workout programs that are both challenging and achievable. His passion lies in helping clients build strength and confidence through personalized training routines. Outside the gym, Alex is an avid runner and enjoys outdoor adventures.
-      </div>
-
-      <div className={styles.blogBody}>
-        With over a decade of experience in the fitness industry, Alex specializes in strength training and functional fitness. Certified by NASM and known for his motivational style, Alex designs workout programs that are both challenging and achievable. His passion lies in helping clients build strength and confidence through personalized training routines. Outside the gym, Alex is an avid runner and enjoys outdoor adventures.
-      </div>
-
-      <div className={styles.blogBody}>
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus...
+        <b>Pro Tip:</b> Stay consistent with your workout routine and track your progress regularly. Small improvements compound over time!
       </div>
     </div>
   );
