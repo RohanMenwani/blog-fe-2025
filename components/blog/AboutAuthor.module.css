@@ -1,0 +1,39 @@
+.aboutAuthorSection {
+  text-align: center;
+  margin: var(--gap-md) 0 36px 0;
+}
+
+.aboutAuthorAvatar {
+  width: 58px;
+  height: 58px;
+  border-radius: 50%;
+  object-fit: cover;
+  background: #eee;
+  margin: 0 auto 13px;
+}
+
+.aboutAuthorTitle {
+  font-size: var(--fs-h3);
+  color: var(--color-meta);
+  font-weight: 600;
+  margin-bottom: 11px;
+}
+
+.aboutAuthorDesc {
+  font-size: var(--fs-body);
+  color: var(--color-text-main);
+}
+
+/* Mobile - Hide on mobile */
+@media (max-width: 768px) {
+  .aboutAuthorSection {
+    display: none;
+  }
+}
+
+@media (max-width: 480px) {
+  .aboutAuthorAvatar {
+    width: 34px;
+    height: 34px;
+  }
+}

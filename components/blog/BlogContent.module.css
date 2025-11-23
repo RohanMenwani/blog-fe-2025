@@ -1,0 +1,53 @@
+.authorMetaRow {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: var(--gap-sm);
+  gap: var(--gap-xs);
+}
+
+.authorInfo {
+  display: flex;
+  align-items: center;
+  gap: var(--gap-xs);
+}
+
+.authorAvatar {
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  object-fit: cover;
+  background: #eee;
+}
+
+.authorName {
+  font-size: var(--fs-meta);
+  color: var(--color-meta);
+  font-weight: 600;
+}
+
+.pubDate {
+  font-size: var(--fs-meta);
+  color: var(--color-meta);
+}
+
+.exploreMoreLink {
+  color: var(--color-meta);
+  font-weight: 600;
+}
+
+.blogBody {
+  font-size: var(--fs-body);
+  color: var(--color-text-main);
+  margin-bottom: var(--gap-md);
+}
+
+.highlightBox {
+  background: var(--color-accent-light);
+  border-radius: var(--radius-sm);
+  padding: 14px 19px;
+  font-size: var(--fs-body);
+  font-weight: 500;
+  color: var(--color-text-main);
+  margin: var(--gap-md) 0;
+}
