@@ -29,6 +29,12 @@
   min-width: 0;
 }
 
+.footerContainer{
+  max-width: 1220px;
+  margin: 0 auto;
+  padding: 0 22px;
+}
+
 @media (max-width: 1050px) {
   .mainGrid {
     grid-template-columns: 1fr;
@@ -41,6 +47,10 @@
   .container {
     padding: 0 7px;
   }
+
+  .footerContainer {
+    padding: 0 7px;
+  }
 }
 
 @media (max-width: 480px) {
@@ -49,4 +59,26 @@
     max-height: 150px;
   }
   
+}
+
+
+/* ... existing styles ... */
+
+.errorContainer {
+  max-width: 600px;
+  margin: 100px auto;
+  padding: 40px;
+  text-align: center;
+  background: var(--color-bg-card);
+  border-radius: var(--radius-lg);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+.errorContainer h1 {
+  color: var(--color-bad);
+  margin-bottom: 16px;
+}
+
+.errorContainer p {
+  color: var(--color-text-secondary);
 }
