@@ -15,7 +15,7 @@ export default function TourGuides() {
           <div key={index} className={styles.guideRow}>
             <Image
               className={styles.guideAvatar}
-              src={guide.avatar}
+              src={`/${guide.avatar}.svg`}
               alt="Guide avatar"
               width={33}
               height={33}

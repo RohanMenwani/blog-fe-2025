@@ -3,6 +3,8 @@ import { exploreItems } from '@/lib/mockData';
 import styles from './Sidebar.module.css';
 
 export default function ExploreMore() {
+  console.log('__exploreItems ',exploreItems);
+  
   return (
     <div>
       <div className={styles.exploreMoreTitle}>Explore more</div>
@@ -11,7 +13,7 @@ export default function ExploreMore() {
           <div key={index} className={styles.exploreMoreItem}>
             <Image
               className={styles.exploreMoreImg}
-              src={item.image}
+              src={`/${item.image}.svg`}
               alt={item.category}
               width={93}
               height={78}
