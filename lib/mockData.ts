@@ -47,24 +47,24 @@ export const tourGuides: TourGuide[] = [
   },
 ];
 
-export const mockComments: Comment[] = [
-  {
-    id: '1',
-    author: 'Kang Haerin',
-    avatar: '/tg3.svg',
-    date: '22 Jul 2022',
-    content: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum ...',
-    rating: 5.0,
-  },
-  {
-    id: '2',
-    author: 'Kang Haerin',
-    avatar: '/tg3.svg',
-    date: '22 Jul 2022',
-    content: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum ...',
-    rating: 5.0,
-  },
-];
+// export const mockComments: Comment[] = [
+//   {
+//     id: '1',
+//     author: 'Kang Haerin',
+//     avatar: '/tg3.svg',
+//     date: '22 Jul 2022',
+//     content: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum ...',
+//     rating: 5.0,
+//   },
+//   {
+//     id: '2',
+//     author: 'Kang Haerin',
+//     avatar: '/tg3.svg',
+//     date: '22 Jul 2022',
+//     content: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum ...',
+//     rating: 5.0,
+//   },
+// ];
 
 
 export const relatedArticles: RelatedArticle[] = [
