@@ -4,9 +4,14 @@ import Image from 'next/image';
 import Hero from '@/components/hero/Hero';
 import styles from '@/styles/Home.module.css';
 import Sidebar from '@/components/sidebar/Sidebar';
+import AboutAuthor from '@/components/blog/AboutAuthor';
+import BlogContent from '@/components/blog/BlogContent';
+import NavigationButtons from '@/components/blog/NavigationButtons';
+import AddCommentForm from '@/components/comments/AddCommentForm';
+import CommentsSection from '@/components/comments/CommentsSection';
+import RelatedArticles from '@/components/related/RelatedArticles';
 
 export default function Home() {
-
   return (
     <>
       <Head>
@@ -32,7 +37,11 @@ export default function Home() {
 
         <div className={styles.mainGrid}>
           <div className={styles.mainContent}>
-            Contains blog detqails, Main center 
+            <BlogContent />
+            <AboutAuthor />
+            <NavigationButtons />
+            <CommentsSection />
+            <AddCommentForm />
              
           </div>
 
@@ -41,7 +50,7 @@ export default function Home() {
         </div>
       </div>
       
-      Articelss section
-    </>
+      <RelatedArticles />
+      </>
   );
 }

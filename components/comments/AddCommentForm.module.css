@@ -1,0 +1,139 @@
+    .addCommentForm {
+  margin-top: 30px;
+  background: var(--color-bg-card);
+  border-radius: var(--radius-sm);
+  box-shadow: 0 2px 8px rgba(30, 30, 50, 0.03);
+  padding: 24px 27px;
+}
+
+.addCommentTitle {
+  font-size: 1.14rem;
+  font-weight: 600;
+  margin-bottom: var(--gap-sm);
+}
+
+.inputRow {
+  display: flex;
+  gap: 16px;
+  margin-bottom: 14px;
+}
+
+.input,
+.input[type='text'],
+.input[type='email'] {
+  font-size: var(--fs-sm);
+  padding: 11px 12px;
+  border-radius: var(--radius-xs);
+  border: 1px solid var(--color-border);
+  width: 100%;
+  background: var(--color-bg-main);
+  outline: none;
+  transition: border-color 0.2s;
+}
+
+.input:focus {
+  border-color: var(--color-accent);
+}
+
+textarea.input {
+  font-family: inherit;
+  resize: vertical;
+  min-height: 60px;
+}
+
+.rateArticleRow {
+  display: flex;
+  align-items: center;
+  gap: 13px;
+  margin-bottom: 18px;
+  flex-wrap: wrap;
+}
+
+.ratingEmojiRow {
+  display: flex;
+  gap: 6px;
+}
+
+.rateBtn {
+  font-size: 1rem;
+  border: none;
+  padding: 4px 14px;
+  border-radius: 16px;
+  margin-left: 16px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: opacity 0.2s;
+}
+
+.rateBtn:hover {
+  opacity: 0.9;
+}
+
+.rateBtn:focus-visible {
+  outline: 2px solid var(--color-accent);
+  outline-offset: 2px;
+}
+
+.rateGood {
+  background: var(--color-good);
+  color: #fff;
+}
+
+.rateBed {
+  background: var(--color-bad);
+  color: #fff;
+}
+
+.rateAverage {
+  background: var(--color-average);
+  color: #fff;
+}
+
+.rateNormal {
+  background: var(--color-normal);
+  color: #fff;
+}
+
+.rateNice {
+  background: var(--color-nice);
+  color: #fff;
+}
+
+.sendBtn {
+  background: var(--color-accent);
+  color: #fff;
+  font-weight: 600;
+  border-radius: var(--radius-md);
+  border: none;
+  font-size: var(--fs-body);
+  padding: 11px 34px;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.sendBtn:hover {
+  background: #2e76fa;
+}
+
+.sendBtn:focus-visible {
+  outline: 2px solid var(--color-accent);
+  outline-offset: 2px;
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  .inputRow {
+    flex-direction: column;
+    gap: 14px;
+  }
+  
+  .rateArticleRow {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+  
+  .rateBtn {
+    margin-left: 0;
+  }
+}

@@ -1,0 +1,116 @@
+.commentSection {
+  margin-top: 40px;
+}
+
+.commentTitle {
+  font-size: var(--fs-h2);
+  font-weight: 700;
+  margin-bottom: 26px;
+}
+
+.commentsList {
+  display: flex;
+  flex-direction: column;
+  gap: var(--gap-sm);
+}
+
+.commentCard {
+  background: var(--color-bg-card);
+  border-radius: var(--radius-xs);
+  padding: var(--gap-sm) var(--gap-md);
+  box-shadow: 0 2px 8px rgba(50, 70, 110, 0.03);
+}
+
+.commentHeaderRow {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+}
+
+.commentAvatar {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  object-fit: cover;
+  background: #eee;
+}
+
+.commentAuthorMeta {
+  flex: 1;
+}
+
+.commentAuthor {
+  font-size: var(--fs-comment);
+  font-weight: 600;
+  color: var(--color-accent);
+}
+
+.commentDate {
+  font-size: var(--fs-sm);
+  color: var(--color-text-secondary);
+}
+
+.commentRating {
+  color: var(--color-star);
+  margin-left: 8px;
+  font-size: 1.08rem;
+}
+
+.commentBody {
+  font-size: var(--fs-comment);
+  color: var(--color-text-main);
+  margin-top: 5px;
+}
+
+/* Loading State */
+.loadingState {
+  text-align: center;
+  padding: 40px 20px;
+  color: var(--color-meta);
+}
+
+.spinner {
+  width: 40px;
+  height: 40px;
+  margin: 0 auto 16px;
+  border: 3px solid var(--color-border);
+  border-top-color: var(--color-accent);
+  border-radius: 50%;
+  animation: spin 0.8s linear infinite;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* Error State */
+.errorState {
+  text-align: center;
+  padding: 40px 20px;
+  color: var(--color-bad);
+}
+
+.retryBtn {
+  margin-top: 16px;
+  background: var(--color-accent);
+  color: #fff;
+  font-weight: 600;
+  border-radius: var(--radius-sm);
+  border: none;
+  padding: 10px 24px;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.retryBtn:hover {
+  background: #2e76fa;
+}
+
+/* Mobile */
+@media (max-width: 700px) {
+  .commentTitle {
+    font-size: var(--fs-h2);
+  }
+}
