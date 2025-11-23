@@ -3,6 +3,7 @@ import Head from 'next/head';
 import Image from 'next/image';
 import Hero from '@/components/hero/Hero';
 import styles from '@/styles/Home.module.css';
+import Sidebar from '@/components/sidebar/Sidebar';
 
 export default function Home() {
 
@@ -36,7 +37,7 @@ export default function Home() {
           </div>
 
           {/* Right sidebar */}
-           Sidebar On the right side
+           <Sidebar />
         </div>
       </div>
       
